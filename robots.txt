@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://ulloa-construction.com/sitemap.xml
