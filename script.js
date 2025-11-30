@@ -56,3 +56,50 @@ if (lightbox && lightboxImg && lightboxCaption) {
     }
   });
 }
+
+// Chat widget logic
+const API_URL = "https://ulloa-chat-backend.onrender.com/chat";
+
+const chatForm = document.getElementById("chat-form");
+const chatInput = document.getElementById("chat-input");
+const chatMessages = document.getElementById("chat-messages");
+
+function addChatMessage(text, who) {
+  const div = document.createElement("div");
+  div.className = "chat-msg " + who;
+  div.textContent = text;
+  chatMessages.appendChild(div);
+  chatMessages.scrollTop = chatMessages.scrollHeight;
+}
+
+if (chatForm && chatInput && chatMessages) {
+  chatForm.addEventListener("submit", async (e) => {
+    e.preventDefault();
+    const text = chatInput.value.trim();
+    if (!text) return;
+
+    // Show user message
+    addChatMessage(text, "user");
+    chatInput.value = "";
+
+    // Temporary "thinking" message
+    addChatMessage("Thinking...", "bot");
+
+    try {
+      const res = await fetch(API_URL, {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ message: text }),
+      });
+
+      const data = await res.json();
+      chatMessages.lastChild.textContent =
+        data.reply || "Sorry, something went wrong.";
+    } catch (err) {
+      console.error(err);
+      chatMessages.lastChild.textContent =
+        "Error reaching the chat server. Please try again later.";
+    }
+  });
+}
+
