@@ -229,8 +229,8 @@ img {
   color: #f9fafb;
   background-image: linear-gradient(
       to bottom right,
-      rgba(15, 23, 42, 0.55),
-      rgba(15, 23, 42, 0.35)
+      rgba(15, 23, 42, 0.25),  /* was 0.55 */
+      rgba(15, 23, 42, 0.15)   /* was ~0.35–0.8 before */
     ),
     url("images/hero.jpg");
   background-position: center;
@@ -240,9 +240,11 @@ img {
 .hero-overlay {
   position: absolute;
   inset: 0;
-  background: radial-gradient(circle at top left, rgba(59, 130, 246, 0.14), transparent),
-    radial-gradient(circle at right, rgba(56, 189, 248, 0.04), transparent),
-   linear-gradient(to bottom, rgba(15, 23, 42, 0.25), rgba(3, 7, 18, 0.45));
+  background: radial-gradient(circle at top left, rgba(59, 130, 246, 0.10), transparent),
+    radial-gradient(circle at right, rgba(56, 189, 248, 0.03), transparent),
+    linear-gradient(to bottom, rgba(15, 23, 42, 0.12), rgba(3, 7, 18, 0.22)); /* was 0.45–0.65 */
+}
+
 
 
 .hero-content {
