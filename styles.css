@@ -229,8 +229,8 @@ img {
   color: #f9fafb;
   background-image: linear-gradient(
       to bottom right,
-      rgba(15, 23, 42, 0.9),
-      rgba(15, 23, 42, 0.8)
+      rgba(15, 23, 42, 0.55),
+      rgba(15, 23, 42, 0.35)
     ),
     url("images/hero.jpg");
   background-position: center;
@@ -242,8 +242,8 @@ img {
   inset: 0;
   background: radial-gradient(circle at top left, rgba(59, 130, 246, 0.14), transparent),
     radial-gradient(circle at right, rgba(56, 189, 248, 0.04), transparent),
-    linear-gradient(to bottom, rgba(15, 23, 42, 0.45), rgba(3, 7, 18, 0.65));
-}
+   linear-gradient(to bottom, rgba(15, 23, 42, 0.25), rgba(3, 7, 18, 0.45));
+
 
 .hero-content {
   position: relative;
