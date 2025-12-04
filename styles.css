@@ -240,10 +240,11 @@ img {
 .hero-overlay {
   position: absolute;
   inset: 0;
-  background: radial-gradient(circle at top left, rgba(59, 130, 246, 0.10), transparent),
-    radial-gradient(circle at right, rgba(56, 189, 248, 0.03), transparent),
-    linear-gradient(to bottom, rgba(15, 23, 42, 0.12), rgba(3, 7, 18, 0.22)); /* was 0.45–0.65 */
+  background: radial-gradient(circle at top left, rgba(59, 130, 246, 0.14), transparent),
+    radial-gradient(circle at right, rgba(56, 189, 248, 0.04), transparent),
+    linear-gradient(to bottom, rgba(15, 23, 42, 0.45), rgba(3, 7, 18, 0.65));
 }
+
 
 
 
@@ -288,6 +289,11 @@ img {
   font-size: 0.9rem;
   color: var(--text-muted);
 }
+
+.hero-title {
+  text-shadow: 0 2px 6px rgba(0, 0, 0, 0.35);
+}
+
 
 /* Buttons */
 
