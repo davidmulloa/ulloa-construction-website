@@ -51,11 +51,13 @@ img {
 }
 
 .section {
+  background: #020617; 
   padding: 4.5rem 0;
 }
 
 .section-alt {
-  background: linear-gradient(135deg, #020617 0%, #020617 40%, #030712 100%);
+  background: #010821;
+ /* background: linear-gradient(135deg, #020617 0%, #020617 40%, #030712 100%);*/
 }
 
 .section-header {
@@ -858,3 +860,388 @@ textarea {
   display: none;
 }
 
+/* projects page html */
+.projects-page-hero {
+  padding-top: 6rem;
+  padding-bottom: 2rem;
+}
+
+.projects-filters {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  margin-bottom: 2rem;
+}
+
+.pill {
+  border-radius: 999px;
+  padding: 0.5rem 1.1rem;
+  font-size: 0.9rem;
+  border: 1px solid rgba(148, 163, 184, 0.7);
+  background: #020617; /* adjust if your background is different */
+  color: #e5e7eb;
+  cursor: pointer;
+}
+
+.pill-active {
+  border-color: #eab308;
+  background: #eab308;
+  color: #020617;
+}
+
+.projects-grid {
+  display: grid;
+  gap: 2rem;
+}
+
+@media (min-width: 900px) {
+  .projects-grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+}
+
+/* Cards */
+
+.project-card {
+  background: rgba(15, 23, 42, 0.9);
+  border-radius: 1.25rem;
+  overflow: hidden;
+  border: 1px solid rgba(148, 163, 184, 0.35);
+  display: flex;
+  flex-direction: column;
+}
+
+.project-image-wrapper {
+  position: relative;
+  overflow: hidden;
+}
+
+.project-image-wrapper img {
+  display: block;
+  width: 100%;
+  height: 210px;
+  object-fit: cover;
+  transform: scale(1.02);
+  transition: transform 220ms ease-out;
+}
+
+.project-card:hover .project-image-wrapper img {
+  transform: scale(1.06);
+}
+
+.project-content {
+  padding: 1.25rem 1.4rem 1.4rem;
+}
+
+.project-title {
+  font-size: 1.05rem;
+  font-weight: 600;
+  margin-bottom: 0.35rem;
+}
+
+.project-meta {
+  font-size: 0.82rem;
+  color: #9ca3af;
+  margin-bottom: 0.65rem;
+}
+
+.project-text {
+  font-size: 0.9rem;
+  color: #e5e7eb;
+}
+
+/* New Change */
+.image-modal {
+  position: fixed;
+  inset: 0;
+  background: rgba(15, 23, 42, 0.88);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 150ms ease-out;
+  z-index: 50;
+}
+
+.image-modal.is-open {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.image-modal-inner {
+  max-width: min(90vw, 1100px);
+  max-height: 90vh;
+  background: #020617;
+  border-radius: 1.25rem;
+  border: 1px solid rgba(148, 163, 184, 0.5);
+  padding: 1rem 1.25rem 1.25rem;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.6);
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+#imageModalImg {
+  width: 100%;
+  height: auto;
+  max-height: 70vh;
+  object-fit: contain;
+  border-radius: 0.75rem;
+}
+
+.image-modal-caption {
+  font-size: 0.9rem;
+  color: #e5e7eb;
+  text-align: left;
+}
+
+.image-modal-close {
+  align-self: flex-end;
+  background: transparent;
+  border: none;
+  font-size: 1.6rem;
+  line-height: 1;
+  cursor: pointer;
+  color: #e5e7eb;
+}
+
+/* End of projects page html */
+.projects-overview-grid {
+  display: grid;
+  gap: 1.5rem;
+}
+
+@media (min-width: 900px) {
+  .projects-overview-grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+}
+
+.projects-overview-card {
+  display: block;
+  padding: 1.5rem 1.75rem;
+  border-radius: 1.25rem;
+  border: 1px solid rgba(148, 163, 184, 0.4);
+  background: rgba(15, 23, 42, 0.9);
+  text-decoration: none;
+  color: #e5e7eb;
+  transition: transform 150ms ease-out, box-shadow 150ms ease-out,
+    border-color 150ms ease-out;
+}
+
+.projects-overview-card h3 {
+  font-size: 1.1rem;
+  margin-bottom: 0.4rem;
+}
+
+.projects-overview-card p {
+  font-size: 0.9rem;
+  color: #cbd5f5;
+}
+
+.projects-overview-card:hover {
+  transform: translateY(-2px);
+  border-color: #eab308;
+  box-shadow: 0 18px 45px rgba(0, 0, 0, 0.4);
+}
+
+.projects-overview-grid {
+  display: grid;
+  gap: 1.5rem;
+}
+
+@media (min-width: 900px) {
+  .projects-overview-grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+}
+
+.projects-overview-card {
+  display: flex;
+  flex-direction: column;
+  min-height: 100%;
+  border-radius: 1.25rem;
+  overflow: hidden;
+  border: 1px solid rgba(148, 163, 184, 0.45);
+  background: rgba(15, 23, 42, 0.96);
+  text-decoration: none;
+  color: #e5e7eb;
+  transition:
+    transform 150ms ease-out,
+    box-shadow 150ms ease-out,
+    border-color 150ms ease-out;
+}
+
+.projects-overview-image img {
+  display: block;
+  width: 100%;
+  height: 190px;
+  object-fit: cover;
+  transform: scale(1.02);
+  transition: transform 180ms ease-out;
+}
+
+.projects-overview-card:hover .projects-overview-image img {
+  transform: scale(1.06);
+}
+
+.projects-overview-content {
+  padding: 1.2rem 1.4rem 1.4rem;
+}
+
+.projects-overview-content h3 {
+  font-size: 1.05rem;
+  margin-bottom: 0.4rem;
+}
+
+.projects-overview-content p {
+  font-size: 0.9rem;
+  color: #cbd5f5;
+}
+
+.projects-overview-card:hover {
+  transform: translateY(-2px);
+  border-color: #eab308;
+  box-shadow: 0 18px 45px rgba(0, 0, 0, 0.4);
+}
+
+/* Pain Points Section */
+/* Pain points / checklist section */
+
+.pain-points {
+  /* Uses your existing section-alt background */
+}
+
+.pain-points-grid {
+  display: grid;
+  gap: 2rem;
+}
+
+@media (min-width: 900px) {
+  .pain-points-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+.pain-points-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.pain-point {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  align-items: flex-start;
+  gap: 0.75rem;
+  font-size: 0.98rem;
+  color: #e5e7eb;
+}
+
+.check-icon {
+  width: 1.15rem;
+  height: 1.15rem;
+  border-radius: 999px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  background: linear-gradient(135deg, var(--accent), #38bdf8); /* blue gradient */
+  box-shadow: 0 0 0 2px rgba(15, 23, 42, 0.85);
+}
+
+.check-icon::before {
+  content: "✓";
+  font-size: 0.75rem;
+  font-weight: 700;
+  color: #020617; /* dark text inside the blue circle */
+}
+
+.pain-points-tagline {
+  margin-top: 2.5rem;
+  text-align: center;
+  font-weight: 600;
+  font-size: 1.05rem;
+  color: var(--text);
+}
+
+
+.pain-points-logo {
+  margin-top: 1rem;
+  max-height: 52px;
+}
+/* End of Pain Points Section */
+
+/* Contact steps strip */
+
+.contact-steps {
+  display: grid;
+  gap: 1.25rem;
+  margin-bottom: 2.5rem;
+}
+
+@media (min-width: 900px) {
+  .contact-steps {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+}
+
+.contact-step-card {
+  background: #020617; /* deep navy to match site */
+  border-radius: 1.25rem;
+  padding: 1.4rem 1.5rem 1.6rem;
+  text-align: center;
+  border: 1px dashed rgba(148, 163, 184, 0.7); /* subtle “ticket” border */
+  box-shadow: 0 16px 40px rgba(15, 23, 42, 0.7);
+}
+
+.contact-step-icon {
+  width: 2.4rem;
+  height: 2.4rem;
+  border-radius: 999px;
+  margin: 0 auto 0.8rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #0b1120;
+  border: 2px solid #3b82f6; /* your blue accent */
+  font-size: 1.3rem;
+}
+
+.contact-step-title {
+  font-size: 1rem;
+  font-weight: 600;
+  margin-bottom: 0.45rem;
+  color: #e5e7eb;
+}
+
+.contact-step-text {
+  font-size: 0.9rem;
+  color: #cbd5f5;
+  line-height: 1.5;
+}
+/* End of Contact steps strip */
+
+.contact-intro {
+  max-width: 42rem;
+  margin: 0 auto 2.5rem;
+  text-align: center;
+}
+
+.contact-intro .contact-list {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 0.5rem;
+}
+
+.contact-intro .contact-list li {
+  margin-bottom: 0.25rem;
+}
+
+.contact-intro .small {
+  color: var(--text-muted);
+}
