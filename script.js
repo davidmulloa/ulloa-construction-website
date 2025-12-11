@@ -129,3 +129,23 @@ if (chatForm && chatInput && chatMessages) {
   });
 }
 
+const navToggle = document.querySelector(".nav-toggle");
+const nav = document.querySelector(".nav");
+const navLinks = document.querySelectorAll(".nav a");
+
+if (navToggle && nav) {
+  navToggle.addEventListener("click", () => {
+    document.body.classList.toggle("nav-open");
+    nav.classList.toggle("nav-open");
+  });
+
+  // Close nav when any link is clicked (for mobile)
+  navLinks.forEach((link) => {
+    link.addEventListener("click", () => {
+      document.body.classList.remove("nav-open");
+      nav.classList.remove("nav-open");
+    });
+  });
+}
+
+
