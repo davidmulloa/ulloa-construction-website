@@ -1109,6 +1109,94 @@ textarea {
 /* Pain Points Section */
 /* Pain points / checklist section */
 
+/* Blog */
+.blog-meta {
+  margin: 0 0 0.45rem;
+  font-size: 0.78rem;
+  letter-spacing: 0.02em;
+  color: var(--text-muted);
+  text-transform: uppercase;
+}
+
+.blog-cta {
+  margin-top: 1.75rem;
+  display: flex;
+  justify-content: center;
+}
+
+.blog-controls {
+  display: grid;
+  gap: 1rem;
+  align-items: center;
+  margin: 0 auto 1.5rem;
+  max-width: 920px;
+}
+
+@media (min-width: 900px) {
+  .blog-controls {
+    grid-template-columns: 1fr auto;
+  }
+}
+
+.blog-search {
+  width: 100%;
+  background: rgba(15, 23, 42, 0.85);
+  border: 1px solid rgba(148, 163, 184, 0.35);
+  border-radius: 999px;
+  padding: 0.85rem 1rem;
+  color: var(--text);
+  outline: none;
+}
+
+.blog-search::placeholder {
+  color: rgba(156, 163, 175, 0.9);
+}
+
+.blog-filters {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.6rem;
+  justify-content: center;
+}
+
+.blog-post {
+  max-width: 920px;
+  margin: 0 auto;
+}
+
+.blog-post .blog-post-card {
+  padding: 1.6rem 1.7rem;
+}
+
+.blog-post h1 {
+  margin-top: 0;
+}
+
+.blog-post p,
+.blog-post li {
+  color: rgba(229, 231, 235, 0.92);
+  line-height: 1.65;
+}
+
+.blog-post h3 {
+  margin-top: 1.5rem;
+}
+
+.blog-post .blog-post-meta {
+  margin: 0.25rem 0 1rem;
+  color: var(--text-muted);
+  font-size: 0.9rem;
+}
+
+.underline-link {
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+.blog-back {
+  margin-bottom: 1rem;
+}
+
 .pain-points {
   /* Uses your existing section-alt background */
 }
